@@ -40,3 +40,25 @@ change in their communities and beyond.
 # already a key in the dicitonary, increment the count. If not, add the new key
 # with a count of 1.
 #### YOUR CODE HERE
+
+words = []
+for word in text.split(" "):
+    word.lower
+    word = word.replace(".", "")
+    word = word.replace(",", "")
+    word = word.replace("\n", "")
+    word = word.replace("!", "")
+    word = word.replace("?", "")
+    word = word.replace(":", "")
+    word = word.replace(";", "")
+    word = word.replace("(", "")
+    word = word.replace(")", "")
+    word = word.replace("/", "")
+    words.append(word)
+dictionary = {}
+for word in words:
+    if word in dictionary:
+        dictionary[word] += 1
+    else:
+        dictionary[word] = 1
+print(dictionary)
